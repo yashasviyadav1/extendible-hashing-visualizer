@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import HashVisualizer from "./components/HashVisualizer";
 import InsertForm from "./components/InsertForm";
 import SearchKeyForm from "./components/SearchKeyForm";
+import {BASE_BACKEND_URL} from "./config";
 
 export default function App() {
   const [globalDepth, setGlobalDepth] = useState(0);
   const [directory, setDirectory] = useState([]);
 
+console.log(BASE_BACKEND_URL);
   const fetchData = async () => {
-    const res = await fetch("http://localhost:8080/api/hash/state");
+    const res = await fetch(`${BASE_BACKEND_URL}/api/hash/state`);
     const data = await res.json();
     setGlobalDepth(data.globalDepth);
     setDirectory(data.directory);
@@ -19,7 +21,7 @@ export default function App() {
   }, []);
 
   const handleInsert = async (key, value) => {
-    await fetch("http://localhost:8080/api/hash/insert", {
+    await fetch(`${BASE_BACKEND_URL}/api/hash/insert`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ key, value }),

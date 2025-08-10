@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {BASE_BACKEND_URL} from "../config";
 
 export default function SearchKeyForm() {
   const [searchKey, setSearchKey] = useState("");
@@ -8,7 +9,7 @@ export default function SearchKeyForm() {
     if (!searchKey) return;
 
     try {
-      const res = await fetch(`http://localhost:8080/api/hash/search?key=${searchKey}`);
+      const res = await fetch(`${BASE_BACKEND_URL}/api/hash/search?key=${searchKey}`);
       const data = await res.text();
       setResult(data);
     } catch (err) {
