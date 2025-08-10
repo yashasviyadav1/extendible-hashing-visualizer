@@ -1,0 +1,63 @@
+.hash-visualizer {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.directory-table-container {
+  max-height: 380px;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+.directory-table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.directory-table th,
+.directory-table td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: center;
+}
+
+.directory-table th {
+  background-color: #222;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.bucket {
+  display: inline-block;
+  background-color: #333;
+  border: 2px solid #666;
+  border-radius: 8px;
+  padding: 5px 10px;
+  min-width: 150px;
+}
+
+.bucket-header {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #666;
+  padding-bottom: 3px;
+}
+
+.bucket-entries {
+  text-align: left;
+}
+
+.entry {
+  padding: 2px 0;
+}
+
+
+
+
+
+
+
+
