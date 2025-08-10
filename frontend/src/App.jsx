@@ -46,7 +46,7 @@ const Footer = () => {
         <div style={{ marginTop: "0px", textAlign: "left", color: "#F7E1D7", fontSize: "12px"}}>
             <p>© Yashasvi Yadav - Find Source Code at <a style={{color: "#EDAFB8", fontSize: "14px" ,fontWeight: "bold"
                 }}
-             href="https://www.google.com">Github</a> </p>
+             href="https://github.com/yashasviyadav1/extendible-hashing-visualizer">Github</a> </p>
         </div>
     );
 }
